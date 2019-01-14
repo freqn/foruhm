@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="pull-right">
+    <%= link_to "New Thread", new_forum_thread_path, class: "btn btn-success" %>
+  </div>
+  <div class="pull-right" style="margin-right: 10px">
+      
+  </div>
+
+  <h1 class="page-header">Forum Threads</h1>
+  <%= render @forum_threads %>
+    <% @forum_threads.each do |t| %>
+      <div>
+        <h2>
+          <%= link_to t.subject, forum_thread_path(t.id) =%>
+        </h2>
+        <p>
+        By <%= t.user.name %> at <%= local_time(t.created_at) %>
+        </p>
+        <p>Posts: <%= t.forum_posts.count %></p>
+      </div> 
+    <% end %>  
+</div>
