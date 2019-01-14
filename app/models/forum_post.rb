@@ -19,6 +19,5 @@ class ForumPost < ApplicationRecord
     users.each do |user|
       NotificationMailer.forum_post_notification(user, self).deliver_later
     end
-    #TODO: Send an email to each of those users 
   end
 end
