@@ -28,6 +28,7 @@ gem 'sassc-rails'
 gem 'record_tag_helper', '~> 1.0'
 gem 'local_time', '~> 2.1'
 gem 'sucker_punch', '~> 2.1', '>= 2.1.1'
+gem 'ransack', '~> 2.1', '>= 2.1.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
